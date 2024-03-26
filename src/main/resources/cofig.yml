@@ -1,0 +1,32 @@
+# Battle status configuration
+# When player attacks monster, it will enter battle status
+battle:
+  # Duration of battle status (in seconds)
+  timeout: 10
+
+# Is ignore creative mode players
+ignore-creative: true
+# Stop playing music after how many times after battle stops, in seconds
+run-away-time: 15
+# Ignored entity types
+ignore-entity:
+  - iron_golem
+# Is ignore PVP
+ignore-pvp: false
+
+# Fade out music, will be played after run-away-time ends
+fadeout: "fadeout"
+
+# Music list
+# custom music will override default music, if all are custom music, the lower priority will be played
+# Format: "musicName -delayTime [second(Int)] -priority [priority(Int)]"
+music:
+  # Default music
+  default: "entity.wither.break_block -delayTime 100 -priority 100"
+
+  # Custom music for entity name (the name must be exactly the same, ignoring color codes)
+  # The lower the priority, the earlier it will be played
+  "Skeletal Knight": "music.disc.5 -delayTime 100 -priority 90"
+
+  # This priority is the highest
+  "Skeleton King": "entity.wither.break_block -delayTime 100 -priority 1"
